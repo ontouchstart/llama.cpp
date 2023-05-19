@@ -18,7 +18,7 @@ git-lfs:
 
 # https://huggingface.co/docs/hub/models-downloading#using-git
 open_llama_7b_400bt_preview:
-	git clone git@hf.co:openlm-research/open_llama_7b_400bt_preview
+	git clone https://huggingface.co/openlm-research/open_llama_7b_400bt_preview
 	rm -rf open_llama_7b_400bt_preview/.git
 
 clean:
