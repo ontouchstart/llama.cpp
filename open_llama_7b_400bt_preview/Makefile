@@ -1,6 +1,9 @@
-all:	build prepare test
+all:
 
-test:
+chat-with-bob: 
+	../main -m open_llama_7b_400bt_preview/ggml-model-q4_0.bin -n 256 --repeat_penalty 1.0 --color -i -r "User:" -f prompts/chat-with-bob.txt
+
+test:	build prepare
 	../main -m open_llama_7b_400bt_preview/ggml-model-q4_0.bin -p "Building a website can be done in 10 simple steps"  -n 512
 
 build:
