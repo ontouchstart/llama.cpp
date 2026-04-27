@@ -1,3 +1,6 @@
+test:	./build/bin
+	./build/bin/llama-cli -hf ggml-org/gemma-3-1b-it-GGUF -p "What is the meaning of life?"
+
 ./build/bin:
 	mkdir -p build
 	cd build && cmake .. \
@@ -8,5 +11,3 @@
 		-D BUILD_TESTS=OFF
 	cd build && cmake --build . 
 
-test:	./build/bin
-	./build/bin/llama-cli -hf ggml-org/gemma-3-1b-it-GGUF -p "What is the meaning of life?"
